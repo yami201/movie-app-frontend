@@ -1,0 +1,11 @@
+<a [routerLink]="['/detail', film.id]" class="no-underline">
+    <div class="cursor-pointer rounded-lg  w-56">
+        <div class="relative shadow-[0_10px_100px_black]">
+            <span class="absolute bottom-3 -right-3 bg-emerald-600 p-2 rounded-full text-white ">
+                {{ film.vote.toFixed(1) }}
+            </span>
+            <img src="https://image.tmdb.org/t/p/w500/{{ film.img }}" class="w-56" alt={{film.title}}/>
+        </div>
+        <h2 class="text-white text-sm mt-2">{{film.title}}</h2>
+    </div>
+</a>

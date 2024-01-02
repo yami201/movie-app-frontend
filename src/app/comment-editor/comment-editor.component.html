@@ -1,0 +1,12 @@
+<form >
+    <div>
+        <textarea 
+            (input)="handleChange($event)"
+            class="outline-none border-[1px] border-emerald-600 w-3/4 p-4 rounded-2xl shadow-xl resize-none text-white bg-transparent"
+            placeholder="Write a comment..."></textarea>
+    </div>
+    <button 
+        type="submit"
+        (click)="handleSubmit($event)"
+        class="bg-emerald-600 text-white px-4 py-2 rounded-lg mt-4">Add your comment</button>
+</form>

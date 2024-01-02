@@ -1,0 +1,15 @@
+<div class="pb-4">
+    <app-search-nav (searchFieldChange)="onSearchFieldChange($event)"></app-search-nav>
+    <div class="grid grid-cols-4 gap-5 p-4 justify-items-center">
+        <div *ngFor="let film of films" class="justify-center">
+            <app-film-item [film]="film"></app-film-item>
+        </div>
+    </div>
+    <div class="w-full flex justify-center text-white">
+        <div class="flex items-center gap-4 border-white border py-1 px-3">
+            <button (click)="getPreviousPage()">«</button>
+            <button class=" border-x border-white px-4 cursor-">Page {{ this.page }}</button>
+            <button (click)="getNextPage()">»</button>
+        </div>
+    </div>
+</div>
