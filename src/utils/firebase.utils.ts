@@ -1,10 +1,8 @@
 import { initializeApp } from "firebase/app";
 import {
-    GoogleAuthProvider,
     createUserWithEmailAndPassword,
     getAuth,
     signInWithEmailAndPassword,
-    signInWithPopup,
     onAuthStateChanged,
     signInAnonymously,
     User
@@ -50,12 +48,6 @@ export const getCurrentUser = async () => {
 
 export const signInAnonymouslyUser = async () => {
     return await signInAnonymously(auth);
-}
-
-export const googleProvider = new GoogleAuthProvider();
-
-export const signInWithGoogle = async () => {
-    return await signInWithPopup(auth, googleProvider);
 }
 
 export const logoutUser = () => {

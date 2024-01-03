@@ -1,10 +1,9 @@
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
 import { 
   loginUser, 
-  signInWithGoogle, 
   signInAnonymouslyUser,
   registerUser
 } from 'src/utils/firebase.utils'; 
@@ -72,12 +71,6 @@ export class LoginComponent {
     } catch (error : any) {
       this.errorMessage = error?.message
     }
-  }
-
-  async handleGoogleLogin(event : Event) {
-    event.preventDefault()
-    await signInWithGoogle()
-    this.router.navigate(['list'])
   }
 
   async handleAnonymousLogin() {
